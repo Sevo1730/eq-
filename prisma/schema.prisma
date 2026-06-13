@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Result {
+  id             String   @id @default(cuid())
+  overallScore   Int
+  categoryScores String
+  answers        String
+  completedAt    DateTime @default(now())
+}
+
+model Feedback {
+  id             String   @id @default(cuid())
+  usefulness     Int
+  wouldUseAgain  String
+  confused       String?
+  wouldRecommend Boolean
+  submittedAt    DateTime @default(now())
+}
