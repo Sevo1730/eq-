@@ -48,7 +48,7 @@ export default function HomePage() {
 
         {/* Headline */}
         <div className="text-center space-y-4">
-          <h1 className="text-[2.6rem] font-bold leading-[1.15] tracking-tight text-slate-900">
+          <h1 className="text-[2rem] sm:text-[2.6rem] font-bold leading-[1.15] tracking-tight text-slate-900">
             How emotionally{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">
               intelligent
@@ -79,7 +79,7 @@ export default function HomePage() {
         </div>
 
         {/* Quick stats */}
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
           {[
             { label: 'Questions', value: '25' },
             { label: 'Dimensions', value: '5' },

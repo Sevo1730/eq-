@@ -69,7 +69,7 @@ export default async function AdminPage() {
 
         {/* Stats */}
         {totalCount > 0 && (
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Total</p>
               <p className="text-3xl font-bold text-slate-900">{totalCount}</p>
@@ -134,8 +134,8 @@ export default async function AdminPage() {
                   {result.categoryScores.map((cs) => {
                     const colors = CATEGORY_COLORS[cs.category as EQCategory];
                     return (
-                      <div key={cs.category} className="grid grid-cols-[140px_1fr_36px] items-center gap-3">
-                        <span className={`text-xs font-medium px-2 py-0.5 rounded-full text-center ${colors.bg} ${colors.text}`}>
+                      <div key={cs.category} className="grid grid-cols-[100px_1fr_32px] sm:grid-cols-[140px_1fr_36px] items-center gap-2 sm:gap-3">
+                        <span className={`text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-0.5 rounded-full text-center truncate ${colors.bg} ${colors.text}`}>
                           {cs.label}
                         </span>
                         <MiniBar score={cs.score} hex={colors.hex} />

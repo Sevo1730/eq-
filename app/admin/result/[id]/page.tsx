@@ -85,7 +85,7 @@ export default async function AdminResultPage({
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
             EQ Score
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 text-center sm:text-left">
             <CircularScore score={raw.overallScore} />
             <div className="space-y-1.5">
               <p className="text-2xl font-bold text-slate-900">{getScoreLabel(raw.overallScore)}</p>

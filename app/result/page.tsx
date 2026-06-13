@@ -76,7 +76,7 @@ export default async function ResultPage() {
 
         {/* Stats */}
         {count > 0 && (
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
             <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Avg Usefulness</p>
               <div className="flex items-end gap-2">

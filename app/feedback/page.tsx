@@ -80,19 +80,19 @@ export default function FeedbackPage() {
                   Was this assessment useful to you?
                 </h2>
               </div>
-              <div className="flex gap-3 justify-between">
+              <div className="grid grid-cols-5 gap-2 sm:gap-3">
                 {[1, 2, 3, 4, 5].map((n) => (
                   <button
                     key={n}
                     onClick={() => setUsefulness(n)}
-                    className={`flex-1 aspect-square rounded-2xl flex flex-col items-center justify-center gap-1 border transition-all text-sm font-semibold
+                    className={`w-full aspect-square rounded-xl sm:rounded-2xl flex flex-col items-center justify-center gap-0.5 sm:gap-1 border transition-all font-semibold
                       ${usefulness === n
                         ? 'bg-violet-600 border-violet-600 text-white shadow-lg shadow-violet-200'
                         : 'bg-white border-slate-200 text-slate-700 hover:border-violet-300 hover:bg-violet-50'
                       }`}
                   >
-                    <span className="text-lg">{n}</span>
-                    <span className="text-[10px] font-medium opacity-70">
+                    <span className="text-base sm:text-lg">{n}</span>
+                    <span className="text-[9px] sm:text-[10px] font-medium opacity-70 hidden xs:block">
                       {n === 1 ? 'Not at all' : n === 3 ? 'Somewhat' : n === 5 ? 'Very much' : ''}
                     </span>
                   </button>
