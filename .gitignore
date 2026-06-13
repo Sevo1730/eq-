@@ -23,9 +23,8 @@ build/
 next-env.d.ts
 
 # sqlite (local only)
-prisma/dev.db
-prisma/dev.db-journal
-prisma/*.db
+**/*.db
+**/*.db-journal
 
 # misc
 .DS_Store
